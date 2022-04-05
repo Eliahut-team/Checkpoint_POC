@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Enter Code</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="./config.js"></script>
+  </head>
+  <body style="background-color:">
+<form id="formAuth-code" method="POST" action="/form_post-code">
+   <div class="container register">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active text-align form-new" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading" style="color:blue">Auth0 Verificaton: Step 2</h3>
+                            <br>
+                            <div class="row register-form">
+                                <div class="col-md-12">
+                                      <form>
+                                        <div class="form-group">
+                                            <input type="text" id="fCode" name="fCode" class="form-control" placeholder="Verification Code" value="" required/>
+                                            <a href="javascript: submitform()" id= "aCode" >Submit Code</a>
+                                            {{!-- <button type="button" class="btn btn-primary" onclick="submitform()">Submit Code</button> --}}
+                                        </div>
+                                      </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </form>
+      <script type="text/javascript">
+        function submitform()
+        {
+          document.forms["formAuth-code"].submit();
+        }
+        </script>      
+  </body>
+</html>
+
